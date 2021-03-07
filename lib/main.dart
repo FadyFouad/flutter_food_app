@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_food_app/plate.dart';
+import 'package:flutter_food_app/model/plate.dart';
 
-import 'carousel_dots.dart';
-import 'carousel_item.dart';
+import 'widget/carousel_dots.dart';
+import 'widget/carousel_item.dart';
 
 void main() {
   runApp(MyApp());
