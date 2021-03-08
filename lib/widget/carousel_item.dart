@@ -14,11 +14,11 @@ class CarouselItem extends StatelessWidget {
 
   CarouselItem(
       {required this.title,
-        required this.isActive,
-        required this.subtitle,
-        required this.imageAssetPath,
-        required this.price,
-        required this.description});
+      required this.isActive,
+      required this.subtitle,
+      required this.imageAssetPath,
+      required this.price,
+      required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -49,12 +49,13 @@ class CarouselItem extends StatelessWidget {
                   style: TextStyle(fontSize: 16.0),
                 ),
                 SizedBox(height: 8.0),
-                //Food image path
+                //Food image
                 imageAssetPath != null
-                    ? Image.asset(imageAssetPath)
+                    ? Hero(
+                        tag: imageAssetPath, child: Image.asset(imageAssetPath))
                     : Container(
-                  height: 200.0,
-                ),
+                        height: 200.0,
+                      ),
                 SizedBox(height: 8.0),
                 Text(
                   price,
