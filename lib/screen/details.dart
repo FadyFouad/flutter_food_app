@@ -22,10 +22,13 @@ class Details extends StatelessWidget {
         ),
         centerTitle: true,
         elevation: 0.0,
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.white,
+        leading: IconButton(
+          icon: Icon(FontAwesomeIcons.arrowLeft),
+          color: Colors.white, onPressed: () {
+          Navigator.of(context).pop();
+        },
         ),
+
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.only(right: 24.0),
@@ -194,7 +197,9 @@ class Details extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0)),
                           color: Theme.of(context).primaryColor,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
                           child: Center(
                             child: Text('Buy'),
                           ),

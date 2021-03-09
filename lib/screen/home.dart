@@ -30,8 +30,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
     _plates = DummyPlates.plates;
 
-
-
     _pageController.addListener(() {
       int next = _pageController.page!.round();
       if (_currentIndex != next) {
@@ -110,10 +108,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   return Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8.0),
                     child: GestureDetector(
-                      onTap: () => Navigator.push(
-                        context,
+                      onTap: () => Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (_) => Details(plate: _plates[index]),
+                          builder: (context) => Details(
+                            plate: _plates[index],
+                          ),
                         ),
                       ),
                       child: CarouselItem(
