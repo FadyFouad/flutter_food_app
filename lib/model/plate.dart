@@ -29,7 +29,7 @@ class DummyPlates {
     Plate(
         name: 'Caesar salad',
         shortDescription: '',
-        imagePath: 'assets/images/chicken_caesar_salad.jpg',
+        imagePath: 'assets/images/peruvian_grilled_beef.jpg',
         price: '\$ 8.00',
         description: 'Green salad of romaine lettuce and croutons with chicken'),
   ];

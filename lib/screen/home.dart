@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_food_app/model/plate.dart';
 import 'package:flutter_food_app/widget/carousel_dots.dart';
@@ -48,6 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    timeDilation = 3.0; // 1.0 means normal animation speed.
+
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: Theme.of(context).primaryColor));
     return Scaffold(
